@@ -11,37 +11,37 @@ export default function Login() {
     const { register, handleSubmit } = useForm();
     const history = useHistory();
 
-    const userIn = context.state.userId;
-    const Userlogin = ({ email, password }) => {
+    // const userIn = context.state.userId;
+    // const Userlogin = ({ email, password }) => {
 
-        // get the users data
-        const user = localStorage.getItem(email);
+    //     // get the users data
+    //     const user = localStorage.getItem(email);
 
-        if (!user) {
-            return alert('An account for this email was not found');
-        }
+    //     if (!user) {
+    //         return alert('An account for this email was not found');
+    //     }
 
-        const userdata = JSON.parse(user);
-        console.log(userdata);
+    //     const userdata = JSON.parse(user);
+    //     console.log(userdata);
 
-        if (password !== userdata.password) {
-            return alert('email or password was incorrect');
-        }
+    //     if (password !== userdata.password) {
+    //         return alert('email or password was incorrect');
+    //     }
 
-        alert('login successful for ' + email);
+    //     alert('login successful for ' + email);
 
-        context.dispatch({
-            type: 'LOGIN',
-            payload: {
-                isLoggedIn: true,
-                userId: userIn,
-                userEmail: userdata.email,
-            },
-        });
-        History.push('/notes');
+    //     context.dispatch({
+    //         type: 'LOGIN',
+    //         payload: {
+    //             isLoggedIn: true,
+    //             userId: userIn,
+    //             userEmail: userdata.email,
+    //         },
+    //     });
+    //     History.push('/notes');
 
 
-    };
+    // };
 
 
 
